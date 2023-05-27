@@ -10,7 +10,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li {
 
 /* Global styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Microsoft Sans Serif", Arial, sans-serif;
   line-height: 1.5;
   color: #333;
 }
@@ -44,6 +44,7 @@ header {
 header h1 {
   font-size: 36px;
   font-weight: bold;
+  text-align: center;
 }
 
 nav ul {
@@ -83,18 +84,47 @@ ul {
   margin-bottom: 15px;
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+/* Image Gallery */
+.image-container {
+  display: flex;
 }
 
-footer p {
-  margin-bottom: 10px;
+.image-container img {
+  flex: 1;
+  margin-right: 10px;
+  max-width: 30%;
+  height: 30%;
+  object-fit: cover;
 }
 
-footer a {
-  color: #fff;
+.image-container img:last-child {
+  margin-right: 0;
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+  
+  header {
+    padding: 10px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
 }
